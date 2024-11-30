@@ -42,10 +42,10 @@ const EventCalendar = () => {
         <Image src="/moreDark.png" alt="" width={20} height={20} />
       </div>
       <div className="flex flex-col gap-4">
-        {events.map((event) => (
+        {events.map((event, index) => (
           <div
             className="p-5 rounded-md border-2 border-gray-100 border-t-4 odd:border-t-lamaSky even:border-t-lamaPurple"
-            key={event.id}
+            key={event.id || index}  // Ensure unique keys
           >
             <div className="flex items-center justify-between">
               <h1 className="font-semibold text-gray-600">{event.title}</h1>
